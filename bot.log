@@ -1,0 +1,23 @@
+INFO:root:Starting the bot
+ERROR:TeleBot:Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+ERROR:TeleBot:Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\Mayak\PycharmProjects\Konevod\venv\lib\site-packages\telebot\__init__.py", line 650, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\Mayak\PycharmProjects\Konevod\venv\lib\site-packages\telebot\util.py", line 143, in raise_exceptions
+    raise self.exception_info
+  File "C:\Users\Mayak\PycharmProjects\Konevod\venv\lib\site-packages\telebot\util.py", line 89, in run
+    task(*args, **kwargs)
+  File "C:\Users\Mayak\PycharmProjects\Konevod\main.py", line 129, in get_text_messages
+    bot.send_message(message.id, "Катя, поздравляю тебя с днем конника! Я как никто другой разделяю твою конную любовь," +
+  File "C:\Users\Mayak\PycharmProjects\Konevod\venv\lib\site-packages\telebot\__init__.py", line 1005, in send_message
+    apihelper.send_message(
+  File "C:\Users\Mayak\PycharmProjects\Konevod\venv\lib\site-packages\telebot\apihelper.py", line 267, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "C:\Users\Mayak\PycharmProjects\Konevod\venv\lib\site-packages\telebot\apihelper.py", line 152, in _make_request
+    json_result = _check_result(method_name, result)
+  File "C:\Users\Mayak\PycharmProjects\Konevod\venv\lib\site-packages\telebot\apihelper.py", line 179, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+
+INFO:root:Starting the bot
